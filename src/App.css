@@ -1,5 +1,5 @@
 body {
-  background-image: url("https://i.pinimg.com/736x/3f/06/54/3f06540cad06c6b33fa935faef27ba39.jpg");
+  background-image: url("https://i.pinimg.com/736x/50/ac/96/50ac96d6074c898c1b27e9bf86d59329.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100vh;
   position: relative;
@@ -27,4 +27,20 @@ body {
   font-size: 2.2vw;
   text-decoration: none;
   text-align: center;
+}
+.homeButton {
+  background-color: white;
+  color: black;
+  border: 2px solid #008cba;
+  margin-bottom: 10vw;
+  font-size: 3vw;
+}
+
+.homeButton:hover {
+  background-color: #008cba;
+  color: white;
+}
+.icon {
+  width: 50vw;
+  margin-top: -6vw;
 }

@@ -2,18 +2,19 @@ import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom'
 
 
-function Main() {
+function Main({search, searchHandler, handleSubmit}) {
     
-    const [main, setMain] = useState ([])
+    const [main, setMain] = useState ([]);
+    const [searchTerm, setSearchTerm] = useState("");
     
     const url = "https://sports.api.decathlon.com/sports"
+
 
     useEffect(() => {
         fetch(url)
         .then((res) => res.json())
         .then((json) => {
-            console.log("This is the json.data", json.data)
-            console.log("this is the json", json)
+// Json data
             let allSports = json.data
             let twenty = allSports.slice(0,50)
             setMain(twenty)
@@ -22,9 +23,8 @@ function Main() {
             console.log(err)
         })
     }, []);
-    
 
-    
+    console.log(search)
     return(
         
         <div>
@@ -48,16 +48,16 @@ function Main() {
             </div>
             <div className="additional">
                 <h1>For additional sports, you can always look up some more!</h1>
-               <form className="submitform"> 
-               {/* onSubmit={handleSubmit} */}
+               
+               <form className="submitform" onSubmit={handleSubmit}> 
                 <input
                 className="input"
                 type="text" 
                 placeholder="Name of the sport" 
                 name="name"
-                // value={sportsInput.name}
-                // onChange={handleChange}
+                value={search} onChange={searchHandler}
                 />
+               <i className="SearchIcon"></i>
                <input type="submit" value="Seach" />
                </form>
             </div>
@@ -71,64 +71,3 @@ function Main() {
 
 
 export default Main
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{/* <Link to={`/details`}><h4>Road cycling</h4></Link>
-                <Link to={`/details`}><h4>Hybrid biking</h4></Link>
-                <Link to={`/details`}><h4>Swimming</h4></Link>
-                <Link to={`/details`}><h4>Horse competition</h4></Link>
-                <Link to={`/details`}><h4>Running</h4></Link>
-                <Link to={`/details`}><h4>Soccer</h4></Link>
-                <Link to={`/details`}><h4>Fitness</h4></Link>
-                <Link to={`/details`}><h4>Surfing</h4></Link>
-                <Link to={`/details`}><h4>Basketball</h4></Link>
-                <Link to={`/details`}><h4>Standup paddleboarding</h4></Link>
-                <Link to={`/details`}><h4>Tennis</h4></Link>
-                <Link to={`/details`}><h4>Volleyball</h4></Link>
-                <Link to={`/details`}><h4>Mountaineering</h4></Link>
-                <Link to={`/details`}><h4>Snowboarding</h4></Link>
-                <Link to={`/details`}><h4>Handball</h4></Link>
-                <Link to={`/details`}><h4>Yoga</h4></Link>
-                <Link to={`/details`}><h4>Underwater diving</h4></Link>
-                <Link to={`/details`}> <h4>Rugby</h4></Link>
-                <Link to={`/details`}> <h4>Hockey</h4></Link>
-                <Link to={`/details`}> <h4>Football</h4></Link>
-                <Link to={`/details`}> <h4>Baseball</h4></Link>
-                <Link to={`/details`}> <h4>Lacrosse</h4></Link>
-                <Link to={`/details`}> <h4>Netball</h4></Link>
-                <Link to={`/details`}> <h4>Netball</h4></Link>
-                <Link to={`/details`}> <h4>Padel</h4></Link>
-                <Link to={`/details`}> <h4>Boxing</h4></Link>
-                <Link to={`/details`}> <h4>Racquetball</h4></Link>
-                <Link to={`/details`}> <h4>Speedball</h4></Link>
-                <Link to={`/details`}> <h4>Track cycling</h4></Link>
-                <Link to={`/details`}> <h4>Dance</h4></Link>
-                <Link to={`/details`}> <h4>Orienteering</h4></Link>
-                <Link to={`/details`}> <h4>Peteca</h4></Link>
-                <Link to={`/details`}> <h4>Archery</h4></Link>
-                <Link to={`/details`}> <h4>Slacklining</h4></Link>
-                <Link to={`/details`}> <h4>Aeromodeling</h4></Link>
-                <Link to={`/details`}> <h4>Ballooning</h4></Link> */}

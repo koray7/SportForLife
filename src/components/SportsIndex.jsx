@@ -21,10 +21,6 @@ function SportsIndex() {
 
     return (
         <div className='sportsDetail'>
-        <h1>Some Details about: </h1>
-        <form action="/" class="inline">
-    <       button className="homeButton">Home Page</button>
-        </form>
 
         </div>
     )
