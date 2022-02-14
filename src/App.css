@@ -1,5 +1,5 @@
 body {
-  background-image: url("https://i.pinimg.com/736x/50/ac/96/50ac96d6074c898c1b27e9bf86d59329.jpg");
+  background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-color-tennis-sport-advertising-background-backgroundmotionwork-outtennistreeshand-paintedfreshhouses-image_75815.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100vh;
   position: relative;
@@ -10,6 +10,7 @@ body {
   background-color: rgb(255, 220, 225, 0.5);
   margin-top: 2vw;
   padding-top: 2vw;
+  color: rgb(190, 27, 109);
 }
 .Sportlist {
   margin-left: 8vw;
@@ -19,6 +20,7 @@ body {
   font-size: 1.5vw;
   display: grid;
   grid-template-columns: repeat(4, 18vw);
+  text-decoration: none;
 }
 .additional {
   margin: 3vw;
@@ -28,19 +30,96 @@ body {
   text-decoration: none;
   text-align: center;
 }
-.homeButton {
-  background-color: white;
-  color: black;
-  border: 2px solid #008cba;
-  margin-bottom: 10vw;
-  font-size: 3vw;
+.homeButton,
+.homeButton::after {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
-.homeButton:hover {
-  background-color: #008cba;
-  color: white;
+.homeButton {
+  background: none;
+  border: 4px solid rgb(190, 27, 109);
+  border-radius: 10px;
+  color: rgb(190, 27, 109);
+  display: block;
+  font-size: 1.5vw;
+  font-weight: bold;
+  margin: 1vw auto;
+  padding: 1vw 2vw;
+  position: relative;
+  text-transform: uppercase;
+  box-shadow: 1px 5px 10px 6px rgb(251, 192, 21);
 }
+.homeButton::before,
+.homeButton::after {
+  background: rgb(251, 192, 21);
+  content: "";
+  position: absolute;
+  z-index: -1;
+}
+.homeButton::after {
+  height: 0;
+  left: 50%;
+  top: 50%;
+  width: 0;
+}
+.homeButton:hover:after {
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.homeButton:hover {
+  color: white;
+  background-color: rgb(255, 191, 0);
+}
+
+/* .homeButton:hover {
+  background-color: #008cba;
+  color: #29f2e4;
+} */
 .icon {
   width: 50vw;
-  margin-top: -6vw;
+  margin-top: -8vw;
+}
+.submitText {
+  margin: 3vw;
+  color: rgb(190, 27, 109);
+  background-color: rgb(255, 220, 225, 0.5);
+}
+.listOfSports {
+  background-color: rgb(255, 220, 225, 0.5);
+  color: rgb(190, 27, 109);
+}
+.h4 {
+  color: rgb(82, 109, 195);
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-top: 2vw;
+  padding-top: 2vw;
+}
+.sportsButton {
+  border-radius: 2vw;
+  font-size: 1.6vw;
+}
+
+.sportsButton:hover {
+  box-shadow: inset 0 0 0 50px #d80286;
+}
+.sportsHeader {
+  background-color: rgb(255, 220, 225, 0.5);
+  color: rgb(190, 27, 109);
+  text-shadow: 0 0 3px #7ebaff;
+}
+.sportsInfo {
+  color: rgb(42, 78, 199);
+  text-shadow: 0 0 3px #ff0000;
+  margin-top: 8vw;
+}
+.input {
+  box-shadow: 1px 5px 10px 2px rgb(251, 192, 21);
+}
+.Submit {
+  box-shadow: 1px 5px 10px 2px rgb(251, 192, 21);
 }

@@ -25,8 +25,8 @@ if(!sports) {
 }
     return(
         <div className='onlySport'>
-            <h1>{sports.attributes.name}</h1>
-            <h1>{sports.attributes.description}</h1>
+            <h1 className='sportsHeader'>~{sports.attributes.name}~</h1>
+            <h1 className='sportsInfo'>{sports.attributes.description}</h1>
             <img className='icon' src={sports.attributes.icon}/>
             
             <form action="/" className="inline">
