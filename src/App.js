@@ -8,10 +8,6 @@ import { useState } from 'react';
 import SearchResults from"./components/SearchResults"
 
 
-//set up a new search result state
-// inside of new state
-// react router use navigate rule
-
 function App() {
   let navigate = useNavigate()
 
@@ -19,7 +15,7 @@ function App() {
   
   const [search, setSearch] = useState("");
   const [results, setResults] = useState([])
-  const [show, setShow] = useState("")
+  // const [show, setShow] = useState("")
   const [showPage, setShowPage] = useState([])
   
   const searchHandler = (e) => {
@@ -28,8 +24,8 @@ function App() {
     .then((res) => res.json())
     .then((json) => {
       let allSports = json.data
-      let twenty = allSports.slice(0,52)
-      setResults(twenty)
+      let sportsCut = allSports.slice(0, 10);
+      setResults(sportsCut)
       //  setResults(data.data)
   }) .catch(console.error)
 }
@@ -43,7 +39,7 @@ fetch(url)
 .then((res) => res.json())
 .then((json) => {
 setShowPage(json)
-console.log(json)
+// console.log(json)
 navigate("/details/searchResults")
 })
 }

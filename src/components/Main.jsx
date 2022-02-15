@@ -17,8 +17,8 @@ function Main({search, searchHandler, handleSubmit, result}) {
         .then((json) => {
 // Json data
             let allSports = json.data
-            let twenty = allSports.slice(0,52)
-            setMain(twenty)
+            let showSports = allSports.slice(0, 52)
+            setMain(showSports)
         })
         .catch(err => {
             console.log(err)

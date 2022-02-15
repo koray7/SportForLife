@@ -6,7 +6,7 @@ function SearchResults(props) {
 console.log(props.showPage)
     return(
         <div>
-            <h1>
+            <h1 className='searchResults'>
             {props.showPage.map(sport => {
                     return (
                    <button className="sportsButton"><Link to={`/details/${sport.id}`} 
@@ -17,6 +17,11 @@ console.log(props.showPage)
                     )
                 }
             )}
+
+            <form action="/" className="inline">
+            <button className="homeButton">Home Page</button>
+            </form>
+
             </h1>
         </div>
     )
