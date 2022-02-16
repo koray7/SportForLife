@@ -3,6 +3,7 @@ import { Link, Navigate } from 'react-router-dom'
 import React from "react";
 // import ReactDOM from "react-dom";
 import SearchResults from "./SearchResults";
+import { Carousel } from "react-bootstrap"
 
 function Main({ search, searchHandler, handleSubmit, result }) {
 
@@ -14,14 +15,14 @@ function Main({ search, searchHandler, handleSubmit, result }) {
             .then((json) => {
                 // Json data
                 let allSports = json.data
-                let showSports = allSports.slice(0, 160)
+                let showSports = allSports.slice(0, 100)
                 setSports(showSports)
             })
             .catch(err => {
                 console.log(err)
             })
     }, []);
-
+    // const slidersports = sports.slice(0,10)
 
     return (
 
@@ -35,18 +36,74 @@ function Main({ search, searchHandler, handleSubmit, result }) {
                 <h1 className="listOfSports">List of Sports</h1>
             </div>
 
-            <div className="Sportlist">
-                {sports.map(sport => {
-                    return (
-                        <button className="sportsButton"><Link to={`/details/${sport.id}`}
-                            style={{ color: 'rgb(82, 109, 195)', textDecoration: 'none' }}
-                            key={sport.id}>
-                            {sport.attributes.name}
-                        </Link></button>
-                    )
-                }
-                )}
-            </div>
+
+
+            <Carousel>
+                <Carousel.Item>
+
+                    <div className="Sportlist sportsBar">
+                        {sports.slice(0, 32).map(sport => {
+                            return (
+                                <button className="sportsButton"><Link to={`/details/${sport.id}`}
+                                    style={{
+                                        color: 'rgb(82, 109, 195)', textDecoration: 'none',
+
+                                    }}
+                                    key={sport.id}>
+                                    {sport.attributes.name}
+                                </Link></button>
+                            )
+                        }
+                        )}
+                    </div>
+
+                    <Carousel.Caption>
+                        <h3></h3>
+                        <p></p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+
+                    <div className="Sportlist">
+                        {sports.slice(33, 65).map(sport => {
+                            console.log(sport)
+                            return (
+                                <button className="sportsButton"><Link to={`/details/${sport.id}`}
+                                    style={{ color: 'rgb(82, 109, 195)', textDecoration: 'none' }}
+                                    key={sport.id}>
+                                    {sport.attributes.name}
+                                </Link></button>
+                            )
+                        }
+                        )}
+                    </div>
+
+                    <Carousel.Caption>
+                        <h3></h3>
+                        <p></p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+
+                    <div className="Sportlist">
+                        {sports.slice(66, 98).map(sport => {
+                            return (
+                                <button className="sportsButton"><Link to={`/details/${sport.id}`}
+                                    style={{ color: 'rgb(82, 109, 195)', textDecoration: 'none' }}
+                                    key={sport.id}>
+                                    {sport.attributes.name}
+                                </Link></button>
+                            )
+                        }
+                        )}
+                    </div>
+
+                    <Carousel.Caption>
+                        <h3></h3>
+                        <p></p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+            </Carousel>
 
             <div className="additional">
                 <h1 className="submitText">For additional sports, you can always look up some more!</h1>
@@ -63,13 +120,8 @@ function Main({ search, searchHandler, handleSubmit, result }) {
                     <button className="Submit" type="submit" >Submit</button>
                 </form>
             </div>
-
-
-
         </div>
-
     )
-
 }
 
 
