@@ -15,6 +15,7 @@ I created an app called "SportsForLife". Main purpose of the app is give informa
 ![](images/Surfing.png)
 
 <h2>API Links</h2>
+
 https://sports.api.decathlon.com/sports
 https://sports.api.decathlon.com/sportssearch/:query?coordinates=:coordinates
 https://sports.api.decathlon.com/sports/:id
