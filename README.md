@@ -1,5 +1,6 @@
 <h1>SportsForLife</h1>
 🚵🏻‍♂️Welcome to SportsForLife App🚵🏻‍♂️
+
 You can choose a sport, get information about the sport and start changing your life!
 
 <h2>User Stories</h2>
@@ -14,7 +15,9 @@ I created an app called "SportsForLife". Main purpose of the app is give informa
 
 <h2>API Links</h2>
 https://sports.api.decathlon.com/sports
+
 https://sports.api.decathlon.com/sportssearch/:query?coordinates=:coordinates"
+
 https://sports.api.decathlon.com/sports/:id
 
 <h2>Deployment Link with Netlify</h2>
