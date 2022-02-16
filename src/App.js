@@ -15,7 +15,6 @@ function App() {
   
   const [search, setSearch] = useState("");
   const [results, setResults] = useState([])
-  // const [show, setShow] = useState("")
   const [showPage, setShowPage] = useState([])
   
   const searchHandler = (e) => {
@@ -31,28 +30,29 @@ function App() {
 }
 
 async function handleSubmit(e) {
-e.preventDefault()
-const query = e.target.elements.name.value
-console.log(query)
-const url = `https://sports.api.decathlon.com/sports/search/${query}?coordinates=-73.5826985,45.5119864`
-fetch(url)
-.then((res) => res.json())
-.then((json) => {
-setShowPage(json)
+  e.preventDefault()
+  const query = e.target.elements.name.value
+  console.log(query)
+  const url = `https://sports.api.decathlon.com/sports/search/${query}?coordinates=-73.5826985,45.5119864`
+  fetch(url)
+  .then((res) => res.json())
+  .then((json) => {
+  setShowPage(json)
 // console.log(json)
-navigate("/details/searchResults")
+    navigate("/details/searchResults")
+    // if(.........)
+
 })
 }
 
   return (
     <div className="App">
-    
-    <Routes>
+      <Routes>
         <Route path="/" element={ <Main search={search} searchHandler={searchHandler} handleSubmit={handleSubmit} result= {results}/> } />
         <Route path="/details" element={ <SportsIndex /> } />
         <Route path="/details/:id" element={ <SportsDetails /> }/>
         <Route path="/details/searchResults" element={ <SearchResults showPage={showPage}/> } />
-    </Routes>
+      </Routes>
     </div>
   );
 }

@@ -44,10 +44,10 @@ body {
   border: 4px solid rgb(190, 27, 109);
   border-radius: 10px;
   color: rgb(0, 130, 195);
-  display: block;
-  font-size: 1.5vw;
+  padding-bottom: -1vw;
+  font-size: 0.8vw 0.8vw;
   font-weight: bold;
-  margin: 3vw auto;
+  margin-bottom: 10vw;
   padding: 1vw 2vw;
   position: relative;
   text-transform: uppercase;
@@ -80,7 +80,8 @@ body {
 
 .icon {
   width: 34vw;
-  margin-top: -4vw;
+  margin-top: -5vw;
+  margin-bottom: -10vw;
 }
 .submitText {
   margin: 1vw;
@@ -112,6 +113,7 @@ body {
   background-color: rgb(255, 220, 225, 0.5);
   color: rgb(190, 27, 109);
   text-shadow: 0 0 3px #7ebaff;
+  margin-top: 3vw;
 }
 .sportsInfo {
   color: rgb(42, 78, 199);
@@ -146,10 +148,40 @@ body {
   color: white;
 }
 .searchResults {
-  margin-top: 22vw;
+  margin: 22vw 0;
   position: absolute;
   top: 50%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+.groupOfSports {
+  color: rgb(190, 27, 109);
+  display: inline-flex;
+  padding: 0.2vw auto;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+.click {
+  color: rgb(82, 109, 195);
+  text-decoration: none;
+  box-shadow: 1px 5px 10px 2px rgb(251, 192, 21);
+  background-color: rgba(255, 255, 255, 0.5);
+  font-weight: bolder;
+}
+.test {
+  color: rgb(82, 109, 195);
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-top: 2rem;
+  text-shadow: 0 0 3px #ff0000;
+}
+.testConcept {
+  margin-bottom: -15vw;
+  padding: 0;
+}
+.exampleText {
+  background-color: rgb(255, 220, 225, 0.5);
+}
+.inline {
+  margin-top: 10vw;
 }

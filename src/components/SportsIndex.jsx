@@ -20,9 +20,7 @@ function SportsIndex() {
 
 
     return (
-        <div className='sportsDetail'>
-
-        </div>
+        <div className='sportsDetail'></div>
     )
 }
 
