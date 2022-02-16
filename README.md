@@ -7,6 +7,7 @@ You can choose a sport, get information about the sport and start changing your 
 I created an app called "SportsForLife". Main purpose of the app is give information to users so users can see which sport that they can do in their life based on their life's situation.Also I added a "Search Bar" so user can look up some more sports if they have any sport name in their mind.
 
 <h2>Some Demonstrations About the App</h2>
+
 ![](images/MainPage.png)
 
 ![](images/Football.png)
@@ -16,7 +17,7 @@ I created an app called "SportsForLife". Main purpose of the app is give informa
 <h2>API Links</h2>
 https://sports.api.decathlon.com/sports
 
-https://sports.api.decathlon.com/sportssearch/:query?coordinates=:coordinates"
+https://sports.api.decathlon.com/sportssearch/:query?coordinates=:coordinates
 
 https://sports.api.decathlon.com/sports/:id
 
