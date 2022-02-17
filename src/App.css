@@ -91,10 +91,10 @@ body {
 .submitText {
   margin: 1vw;
   color: rgb(190, 27, 109);
-  background-color: rgb(255, 220, 225, 0.4);
+  background-color: rgb(255, 220, 225, 0.7);
   text-align: center;
   display: inline-flex;
-  padding: 1vw;
+  padding: -2vw;
 }
 .listOfSports {
   background-color: rgb(255, 220, 225, 0.5);
