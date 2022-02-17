@@ -1,5 +1,6 @@
 body {
-  background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-color-tennis-sport-advertising-background-backgroundmotionwork-outtennistreeshand-paintedfreshhouses-image_75815.jpg");
+  background-image: url("https://cdn.wallpapersafari.com/91/2/A5ca6M.jpg");
+  /* background-image: url("https://www.teahub.io/photos/full/5-56385_wakeboarding-wakeboard-sports-wallpapers-hd-desktop-wakeboard-wallpaper.jpg"); */
   background-repeat: no-repeat;
   background-size: 100% 100vh;
   position: relative;
@@ -90,9 +91,10 @@ body {
 .submitText {
   margin: 1vw;
   color: rgb(190, 27, 109);
-  background-color: rgb(255, 220, 225, 0.6);
+  background-color: rgb(255, 220, 225, 0.4);
   text-align: center;
   display: inline-flex;
+  padding: 1vw;
 }
 .listOfSports {
   background-color: rgb(255, 220, 225, 0.5);
@@ -103,7 +105,7 @@ body {
   color: rgb(82, 109, 195);
   background-color: rgba(255, 255, 255, 0.5);
   margin-top: 2vw;
-  padding-top: 2vw;
+  padding: 2vw;
 }
 .sportsButton {
   border-radius: 2vw;
