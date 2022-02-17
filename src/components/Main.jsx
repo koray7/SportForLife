@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
 import { Link, Navigate } from 'react-router-dom'
 import React from "react";
-// import ReactDOM from "react-dom";
 import SearchResults from "./SearchResults";
 import { Carousel } from "react-bootstrap"
 
-function Main({ search, searchHandler, handleSubmit, result }) {
+function Main({ search, searchHandler, handleSubmit }) {
 
     const [sports, setSports] = useState([]);
     const url = "https://sports.api.decathlon.com/sports"
@@ -22,7 +21,6 @@ function Main({ search, searchHandler, handleSubmit, result }) {
                 console.log(err)
             })
     }, []);
-    // const slidersports = sports.slice(0,10)
 
     return (
 
@@ -41,7 +39,7 @@ function Main({ search, searchHandler, handleSubmit, result }) {
             <Carousel>
                 <Carousel.Item>
 
-                    <div className="Sportlist sportsBar">
+                    <div className="Sportlist">
                         {sports.slice(0, 32).map(sport => {
                             return (
                                 <button className="sportsButton"><Link to={`/details/${sport.id}`}
@@ -57,10 +55,6 @@ function Main({ search, searchHandler, handleSubmit, result }) {
                         )}
                     </div>
 
-                    <Carousel.Caption>
-                        <h3></h3>
-                        <p></p>
-                    </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
 
@@ -78,10 +72,6 @@ function Main({ search, searchHandler, handleSubmit, result }) {
                         )}
                     </div>
 
-                    <Carousel.Caption>
-                        <h3></h3>
-                        <p></p>
-                    </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
 
@@ -98,10 +88,6 @@ function Main({ search, searchHandler, handleSubmit, result }) {
                         )}
                     </div>
 
-                    <Carousel.Caption>
-                        <h3></h3>
-                        <p></p>
-                    </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
 

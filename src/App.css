@@ -193,3 +193,16 @@ body {
   height: 50vw;
   text-align: center;
 }
+.Sportlist {
+  padding-bottom: 4vw;
+}
+.carousel-control-next-icon {
+  outline: black;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid black;
+}
+.carousel-control-prev-icon {
+  outline: black;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid black;
+}
