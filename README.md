@@ -10,9 +10,9 @@ I created an app called "SportsForLife". Main purpose of the app is give informa
 
 ![](images/MainPage.png)
 
-![](images/Football.png)
+![](images/SearchPage.png)
 
-![](images/Surfing.png)
+![](images/SinglePage.png)
 
 <h2>API Links</h2>
 https://sports.api.decathlon.com/sports
